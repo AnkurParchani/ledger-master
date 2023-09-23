@@ -1,0 +1,24 @@
+extends base
+
+block content 
+
+    section.section__login
+        .authBox.login_wrap
+            h1.authHeading Sign up
+            .container
+                .row
+                    .col-sm-12.col-lg-12.col-md-12
+                        form(action='' class="auth_form signup_form")
+                            .authForm_group
+                                input.signup_username.authForm_field( placeholder='Username' type='text')
+                                label.authForm_label(for='Username') Username
+                            .authForm_group.field
+                                input.signup_password.authForm_field( placeholder='Password' type='password')
+                                label.authForm_label(for='Password') Password
+                            .authForm_group.field
+                                input.signup_passwordConfirm.authForm_field( placeholder='Confirm Password' type='password')
+                                label.authForm_label(for='Password') Confirm Password
+                            .authForm_btn
+                                button Sign up
+            p.signUpLine Already have an account?
+                a(href="/login")  Login!

@@ -1,0 +1,98 @@
+doctype html
+html(lang="en")
+    head
+        include _header
+        script(src="js/homePage.js" defer type="module") 
+    body
+        nav.navbar.navbar-expand-md
+            a(class="navbar-brand" href="/") Ledgers
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse.justify-content-end
+                ul.navbar-nav.nav__links
+                    li.nav-item
+                        a.nav-link#signup.homePageLinks(href="/signup") Signup
+                    li.nav-item
+                        a.nav-link#loginLink.homePageLinks(href='/login') Login
+                    li.nav-item
+                        button.nav-link#contactLink.homePageLinks Contact us
+        main
+            .modalBackdrop
+            .introContainer 
+                h2.introLine Welcome to Ledgers: Your One-Stop Solution for Customer Management
+                p.aboutLine Your Comprehensive Solution for Customer Management. With our powerful platform, you can easily store and manage customer data, access important information on-the-go, and streamline your workflow.
+                img(src="img/documents/homePage.png" alt="")
+
+            .aboutContainer
+                .container
+                    .row 
+                        .col-lg-4.col-md-12.col-sm-12.separateContainer
+                            .separateContainerContent
+                                i.fa-solid.fa-pen-to-square
+                                h1 Customizable categories
+                                p With our ledger website, you have the freedom to create and manage your own categories based on your needs. This allows you to track your purchases and sales
+                        .col-lg-4.col-md-6.col-sm-12.separateContainer
+                            .separateContainerContent
+                                i.fa-solid.fa-calculator
+                                h1 Automated calculations
+                                p  We understand that manually calculating totals for every category and transaction can be a tedious and time-consuming process. 
+                        .col-lg-4.col-md-6.col-sm-12.separateContainer
+                            .separateContainerContent
+                                i.fa-solid.fa-magnifying-glass
+                                h1 Search functionality
+                                p  Our search feature allows you to quickly find specific transactions or categories within your ledger. This can be especially useful if you have a lot of data to manage.
+
+            .reviewContainer 
+                h2.containerHeading 
+                    span WORD 
+                    | FROM OUR USERS
+                .container 
+                    .owl-carousel.owl-theme.reviewCarousel
+
+            .signupContainer 
+                .container 
+                    .signupBox 
+                        h1 SEE LEDGERS IN ACTION TODAY!
+                        p Manage your finances like a pro with our intuitive ledger platform – track expenses, record payments, and stay on top of your business game
+                        a(href="/signup") Sign up
+
+            .faqContainer 
+                h2.containerHeading 
+                    span FAQs! 
+                    | NEED HELP? 
+                .container 
+                    #faqAccordion.accordion
+
+            .footer 
+                h6 &copy; 2023 Ankur Parchani. All rights reserved.
+
+
+            //- Contact Us modal
+            .contactModal.hidden
+                h2.containerHeading 
+                    span CONTACT 
+                    | US
+                .container
+                    .row 
+                        .col-lg-6.col-md-12.col-sm-12.contactBox 
+                            h1 Meet us
+                            p 
+                                i(class="fa-solid fa-phone")
+                                |  98XXXXXXXXX
+                            p 
+                                i(class="fa-solid fa-envelope")
+                                | ankurparchani@gmail.com
+                            p 
+                                i(class="fa-solid fa-location-dot")
+                                | 123 Main Street, Anytown, India
+                        .col-lg-6.col-md-12.col-sm-12.contactBox 
+                            h1 Any queries?
+                            form.contactForm(action="") 
+                                input.formTextInput(type="text" placeholder="Enter your Name" required)
+                                input.formTextInput(type="email" placeholder="Enter your Email" required)
+                                textarea#contactMessage.formTextInput( placeholder="Enter your Message" name="" cols="30" rows="3" required)
+
+                                button.contactSendBtn Send
+                                button.contactCancelBtn Cancel
+
+
